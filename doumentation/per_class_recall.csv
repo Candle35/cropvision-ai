@@ -1,0 +1,9 @@
+class,n_field,recall,ci_low,ci_high
+bacterial_spot,110,0.036,0.009,0.073
+early_blight,88,0.773,0.682,0.852
+healthy,63,0.19,0.095,0.286
+late_blight,111,0.559,0.468,0.649
+leaf_mold,91,0.099,0.044,0.165
+mosaic_virus,54,0.019,0.0,0.056
+septoria_leaf_spot,151,0.232,0.172,0.298
+yellow_leaf_curl_virus,76,0.211,0.118,0.303

@@ -1,0 +1,5 @@
+condition,accuracy,macro_F1
+original,0.278,0.23
+dark (x0.5),0.249,0.197
+bright (x1.6),0.273,0.215
+blur (sigma 4),0.25,0.197

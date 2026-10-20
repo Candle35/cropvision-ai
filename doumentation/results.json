@@ -1,0 +1,161 @@
+{
+  "headline": {
+    "lab_acc": 0.9670818505338078,
+    "field_acc": 0.2782258064516129,
+    "field_acc_ci": [
+      0.24459005376344087,
+      0.30917338709677417
+    ],
+    "lab_macro_f1": 0.9662073754995084,
+    "field_macro_f1": 0.23047007729890057,
+    "field_macro_f1_ci": [
+      0.19777626856703323,
+      0.2601104954864674
+    ],
+    "gap_pp": 68.88560440821949,
+    "n_field": 744,
+    "smoke": false
+  },
+  "per_class_recall": [
+    {
+      "class": "bacterial_spot",
+      "n_field": 110,
+      "recall": 0.036,
+      "ci_low": 0.009,
+      "ci_high": 0.073
+    },
+    {
+      "class": "early_blight",
+      "n_field": 88,
+      "recall": 0.773,
+      "ci_low": 0.682,
+      "ci_high": 0.852
+    },
+    {
+      "class": "healthy",
+      "n_field": 63,
+      "recall": 0.19,
+      "ci_low": 0.095,
+      "ci_high": 0.286
+    },
+    {
+      "class": "late_blight",
+      "n_field": 111,
+      "recall": 0.559,
+      "ci_low": 0.468,
+      "ci_high": 0.649
+    },
+    {
+      "class": "leaf_mold",
+      "n_field": 91,
+      "recall": 0.099,
+      "ci_low": 0.044,
+      "ci_high": 0.165
+    },
+    {
+      "class": "mosaic_virus",
+      "n_field": 54,
+      "recall": 0.019,
+      "ci_low": 0.0,
+      "ci_high": 0.056
+    },
+    {
+      "class": "septoria_leaf_spot",
+      "n_field": 151,
+      "recall": 0.232,
+      "ci_low": 0.172,
+      "ci_high": 0.298
+    },
+    {
+      "class": "yellow_leaf_curl_virus",
+      "n_field": 76,
+      "recall": 0.211,
+      "ci_low": 0.118,
+      "ci_high": 0.303
+    }
+  ],
+  "calibration": {
+    "mean_confidence": 0.6857439279556274,
+    "accuracy": 0.2782258064516129,
+    "T_lab": 0.8043386217415815,
+    "ece_uncalibrated": 0.4075181039390705,
+    "ece_lab_calibrated": 0.4664754071623407,
+    "coverage_raw": {
+      "100%": 0.2782258064516129,
+      "80%": 0.30084033613445377,
+      "60%": 0.3475336322869955,
+      "40%": 0.39730639730639733,
+      "20%": 0.4527027027027027
+    },
+    "ece_cross_fitted": 0.07649347426429871,
+    "deferral": [
+      {
+        "target": 0.7,
+        "coverage": 0.06317204301075269,
+        "accuracy_answered": 0.7021276595744681
+      },
+      {
+        "target": 0.8,
+        "coverage": 0.028225806451612902,
+        "accuracy_answered": 0.7142857142857143
+      },
+      {
+        "target": 0.9,
+        "coverage": 0.009408602150537635,
+        "accuracy_answered": 0.5714285714285714
+      }
+    ]
+  },
+  "robustness": [
+    {
+      "condition": "original",
+      "accuracy": 0.278,
+      "macro_F1": 0.23
+    },
+    {
+      "condition": "dark (x0.5)",
+      "accuracy": 0.249,
+      "macro_F1": 0.197
+    },
+    {
+      "condition": "bright (x1.6)",
+      "accuracy": 0.273,
+      "macro_F1": 0.215
+    },
+    {
+      "condition": "blur (sigma 4)",
+      "accuracy": 0.25,
+      "macro_F1": 0.197
+    }
+  ],
+  "confident_mistakes": {
+    "count": 80,
+    "total_mistakes": 537
+  },
+  "sweep": {
+    "0%": {
+      "acc": 0.28225806451612906,
+      "macro_f1": 0.24181969253327434,
+      "n_field_added": 0,
+      "n_test": 372
+    },
+    "10%": {
+      "acc": 0.3978494623655914,
+      "macro_f1": 0.3795636437159903,
+      "n_field_added": 74,
+      "n_test": 372
+    },
+    "25%": {
+      "acc": 0.40860215053763443,
+      "macro_f1": 0.40181104420230623,
+      "n_field_added": 186,
+      "n_test": 372
+    },
+    "50%": {
+      "acc": 0.4327956989247312,
+      "macro_f1": 0.43077787271880263,
+      "n_field_added": 372,
+      "n_test": 372
+    }
+  }
+}
