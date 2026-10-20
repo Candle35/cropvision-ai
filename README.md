@@ -3,11 +3,9 @@
 **AI Innovation Hackathon 2026** · Women in AI Research, Innovation & Entrepreneurship Club
 **Track:** AI/ML Methodology · **Challenge 07:** CropVision AI, Early Crop Stress Detection
 
-> Search this file for `FILL` before submitting. Every `[[FILL: ...]]` must be replaced or deleted.
-
 ## Team
 - **Team name:** Fella AI
-- **Members:** Emmanuella (Team Leader), Akorfa [[FILL: add surnames if you want them shown, otherwise delete this note]]
+- **Members:** Emmanuella (Team Leader), Akorfa
 
 ## Selected problem statement
 AI/ML Methodology, Challenge 07: CropVision AI, Early Crop Stress Detection.
@@ -52,7 +50,7 @@ git clone https://github.com/Candle35/cropvision-ai.git
 cd cropvision-ai
 pip install -r requirements.txt
 ```
-Python [[FILL: version printed by Colab, for example 3.12]]. A GPU is recommended for training; the demo can run on CPU. Datasets are downloaded by the notebook and are not included in this repository.
+Python 3 (the Google Colab default runtime on 20 October 2026). A GPU is recommended for training; the demo can run on CPU. Datasets are downloaded by the notebook and are not included in this repository.
 
 ## Usage
 Everything runs from one notebook: `notebooks/CropVision_AI_Final_Notebook.ipynb`.
@@ -74,7 +72,7 @@ There is no separate `src/` code: the pipeline lives in the notebook. The traine
 | Yellow leaf curl virus | Tomato___Tomato_Yellow_Leaf_Curl_Virus | Tomato leaf yellow virus | 5357 | 76 |
 | Healthy | Tomato___healthy | Tomato leaf | 1591 | 63 |
 
-PlantDoc images are the train and test folders combined (744 in total), used for evaluation only. Excluded: spider mites (only 2 PlantDoc images) and target spot (no PlantDoc equivalent). [[FILL: after looking at a few images, state whether the PlantDoc "Tomato leaf yellow virus" folder was confirmed to be yellow leaf curl; if you did not check, say it is assumed]]
+PlantDoc images are the train and test folders combined (744 in total), used for evaluation only. Excluded: spider mites (only 2 PlantDoc images) and target spot (no PlantDoc equivalent). We spot-checked 8 images from the PlantDoc "Tomato leaf yellow virus" folder: most show yellowed, curled or variegated leaves consistent with yellow leaf curl virus (one is a slide explicitly about TYLCV), but a few are noisy (a potted plant, a collage) and we cannot confirm the label for every image. We therefore treat this folder as yellow leaf curl virus by assumption.
 Sources: PlantVillage (https://github.com/spMohanty/PlantVillage-Dataset), PlantDoc classification set (https://github.com/pratikkayal/PlantDoc-Dataset, CC BY 4.0). PlantVillage licence: [[FILL: copy the licence stated in the PlantVillage repository]].
 
 ## Models used
@@ -125,15 +123,16 @@ Figures are in `documentation/figures/`: `lab_vs_field_gap.png`, `field_confusio
 More crops, locally collected African field images, a mobile-friendly app, and larger field datasets: in our sweep, adding even a small amount of labelled field data improved held-out field accuracy from 28.2% to 39.8%, though more data and repeated runs are needed to confirm this.
 
 ## AI-assisted development disclosure
-We used Claude (Anthropic's AI assistant) to help draft and debug the code and to plan the analysis. The team ran the experiments, checked the results and wrote the interpretation. [[FILL: Emmanuella and Akorfa, confirm that you can both explain every part of the code and the results to the judges before keeping this sentence: "Both team members have reviewed and can explain all code and results."]]
+We used Claude (Anthropic's AI assistant) to help draft and debug the code and to plan the analysis. The team ran the experiments, checked the results and wrote the interpretation. Both team members have reviewed and can explain all code and results.
 
 ## Pre-existing components
-The repository folder structure and this README template were prepared before the event. An earlier rehearsal of the approach (a fastai ResNet34 notebook) was run before the development window; none of its numbers are used in this submission, and fastai is not used in the final pipeline. The final model, all reported results and the demo come from the final notebook, run in the development window on 20 October 2026. [[FILL: confirm this is accurate, including that the rehearsal ran before the window opened]] Pretrained ImageNet weights and the public datasets are existing resources and are credited below.
+The repository folder structure and this README template were prepared before the event. An earlier rehearsal of the approach (a fastai ResNet34 notebook) was run before the development window; none of its numbers are used in this submission, and fastai is not used in the final pipeline. The final model, all reported results and the demo come from the final notebook, run in the development window on 20 October 2026. Pretrained ImageNet weights and the public datasets are existing resources and are credited below.
 
 ## Responsible-use statement
 Research and educational prototype only. It gives no treatment or pesticide advice and is not a diagnosis. Public datasets only; no private data. No credentials or API keys are stored in this repository.
 
 ## External resources and attributions
+- Mohanty, S. P., Hughes, D. P. and Salathé, M. (2016). Using deep learning for image-based plant disease detection. Frontiers in Plant Science, 7. doi:10.3389/fpls.2016.01419 (the citation requested by the PlantVillage dataset repository)
 - Hughes, D. P. and Salathé, M. (2015). An open access repository of images on plant health to enable the development of mobile disease diagnostics. arXiv:1511.08060 (PlantVillage)
 - Singh, D., Jain, N., Jain, P., Kayal, P., Kumawat, S., Batra, N. (2020). PlantDoc: A Dataset for Visual Plant Disease Detection. CoDS-COMAD 2020 (CC BY 4.0)
 - Tan, M. and Le, Q. V. (2019). EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks. ICML
